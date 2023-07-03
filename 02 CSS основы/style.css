@@ -1,0 +1,68 @@
+/* стили для заголовка h1 */
+h1 {
+    color: blueviolet;
+    background-color: aliceblue;
+    font-size: 30px;
+    font-style: italic;
+}
+
+/* стили для заголовка h2 */
+h2 {
+    color: rgb(34, 102, 40);
+}
+
+/* задаем стили по идентификатору*/
+#par-1 {
+    color: black;
+    background-color: cadetblue;
+}
+
+/* задаем стили по имени класса */
+.par {
+    color: rgb(228, 206, 10);
+    background-color: brown;
+}
+
+/* стили для параграфов */
+p {
+    color: rgb(19, 63, 20);
+    background-color: brown;
+}
+
+.par-2 {
+    color: brown;
+    background-color: black;
+    font-size: 30px;
+    font-style: italic;
+}
+
+/* users */
+.users {
+    color: rgb(65, 94, 35);
+    background-color: rgb(212, 250, 221);
+    padding: 30px;
+}
+
+.users .user {
+    color: rgb(29, 29, 59);
+    background-color: rgb(245, 179, 179);
+}
+
+.users .user-2 {
+    background-color: rgb(245, 146, 146);
+}
+
+.users .user h2 {
+    color: white;
+}
+
+.users .user h3 {
+    color: bisque;
+}
+
+.users .user p {
+    background-color: bisque;
+    color: rgb(245, 179, 179);
+    font-size: 16px;
+    font-style: normal;
+}
