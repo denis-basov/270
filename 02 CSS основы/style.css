@@ -1,6 +1,6 @@
 /* стили для заголовка h1 */
 h1 {
-    color: blueviolet;
+    color: #25ab19;
     background-color: aliceblue;
     font-size: 30px;
     font-style: italic;
@@ -24,10 +24,10 @@ h2 {
 }
 
 /* стили для параграфов */
-p {
+/* p {
     color: rgb(19, 63, 20);
     background-color: brown;
-}
+} */
 
 .par-2 {
     color: brown;
@@ -39,18 +39,25 @@ p {
 /* users */
 .users {
     color: rgb(65, 94, 35);
-    background-color: rgb(212, 250, 221);
+    /* background-image: url('images/image-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
     padding: 30px;
+
+    background: rgb(249, 133, 133);
+    background: linear-gradient(45deg, rgba(249, 133, 133, 1) 0%, rgba(255, 183, 183, 1) 46%, rgba(255, 252, 172, 1) 100%);
 }
 
 .users .user {
     color: rgb(29, 29, 59);
-    background-color: rgb(245, 179, 179);
+    background-color: transparent;
 }
 
+/* 
 .users .user-2 {
     background-color: rgb(245, 146, 146);
-}
+} */
 
 .users .user h2 {
     color: white;
@@ -65,4 +72,111 @@ p {
     color: rgb(245, 179, 179);
     font-size: 16px;
     font-style: normal;
+}
+
+.head-2 {
+    background-color: #edfeea;
+    /* border: 4px solid darkmagenta; */
+    border-bottom: 3px solid blue;
+    border-top: 3px solid rgb(255, 0, 0);
+    /* border-left: 3px solid blue;
+    border-right: 3px solid blue; */
+    border-radius: 12px;
+
+    /* margin: 25px; */
+
+    /* margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 12px;
+    margin-right: 18px; */
+
+    /* margin: 10px 15px 20px 25px; */
+    /* margin: 10px 15px 20px; */
+    margin: 10px 20px;
+    padding: 15px 30px;
+    max-width: 500px;
+    /* height: 50px; */
+
+}
+
+.head {
+    /* color: brown;
+    background: linear-gradient(orange, pink);
+    border: 2px solid rgb(195, 100, 65);
+    border-radius: 5px; */
+
+    /* border-bottom: 20px solid #ff00ae;
+    border-top: 20px solid #ff00ae; */
+    /* border-right: 20px solid #ff00ae;
+border-left: 20px solid #ff00ae; */
+    /* border-radius: 50px;
+    background-color: #6200ff;
+    color: aqua;
+    padding: 20px; */
+
+    /* color: rgb(82, 58, 63);
+    background-image: url(https://a.deviantart.net/avatars/p/s/psychoemocuttergurl.jpg?5);
+    border: 3px solid rgb(12, 3, 143);
+    border-radius: 20px; */
+
+    background: linear-gradient(217deg, rgba(148, 39, 39, 0.8), rgba(16, 2, 204, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(160, 123, 21, 0) 70.71%), linear-gradient(336deg, rgba(12, 158, 78, 0.8), rgba(106, 189, 11, 0) 70.71%);
+    border-radius: 5%;
+    color: rgb(0, 85, 0);
+
+    /* margin: 10px 15px 5px 10px; */
+
+    /* margin-top: 10px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    margin-left: 20px; */
+
+    margin: 10px 15px 5px 20px;
+}
+
+
+/* блок с автором */
+.author {
+    max-width: 300px;
+    padding: 15px;
+    margin: 50px auto;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    color: rgb(71, 71, 71);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.author .author__img {
+    width: 100%;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: -4px;
+}
+
+.author .author__name {
+    color: rgb(71, 71, 71);
+    text-align: center;
+    margin: 7px 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.author .author__info {
+    margin-right: 20px;
+    padding-left: 20px;
+    border-left: 3px solid #7e5d32;
+    letter-spacing: 1px;
+    font-style: italic;
+    line-height: 20px;
+}
+
+.author .author__age {
+    text-align: right;
+    /* text-decoration: line-through; */
+    border-bottom: 1px solid;
+    padding-bottom: 3px;
+    margin-left: 35%;
+    font-weight: 600;
+    font-size: 14px;
 }
