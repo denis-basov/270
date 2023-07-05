@@ -38,12 +38,14 @@ h2 {
 
 /* users */
 .users {
+    display: inline-block;
     color: rgb(65, 94, 35);
     /* background-image: url('images/image-1.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; */
     padding: 30px;
+    margin-right: -4px;
 
     background: rgb(249, 133, 133);
     background: linear-gradient(45deg, rgba(249, 133, 133, 1) 0%, rgba(255, 183, 183, 1) 46%, rgba(255, 252, 172, 1) 100%);
@@ -119,9 +121,9 @@ border-left: 20px solid #ff00ae; */
     border: 3px solid rgb(12, 3, 143);
     border-radius: 20px; */
 
-    background: linear-gradient(217deg, rgba(148, 39, 39, 0.8), rgba(16, 2, 204, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(160, 123, 21, 0) 70.71%), linear-gradient(336deg, rgba(12, 158, 78, 0.8), rgba(106, 189, 11, 0) 70.71%);
+    /* background: linear-gradient(217deg, rgba(148, 39, 39, 0.8), rgba(16, 2, 204, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(160, 123, 21, 0) 70.71%), linear-gradient(336deg, rgba(12, 158, 78, 0.8), rgba(106, 189, 11, 0) 70.71%);
     border-radius: 5%;
-    color: rgb(0, 85, 0);
+    color: rgb(0, 85, 0); */
 
     /* margin: 10px 15px 5px 10px; */
 
@@ -131,11 +133,25 @@ border-left: 20px solid #ff00ae; */
     margin-left: 20px; */
 
     margin: 10px 15px 5px 20px;
+
+    background-color: #edfeea;
+    color: black;
+    /* transition: color 1s, background-color 1s; */
+    transition: all 1s;
+}
+
+/* стили при наведении мыши на заголовок*/
+.head:hover {
+    background-color: cadetblue;
+    color: darkmagenta;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 
 /* блок с автором */
 .author {
+    position: relative;
     max-width: 300px;
     padding: 15px;
     margin: 50px auto;
@@ -143,6 +159,27 @@ border-left: 20px solid #ff00ae; */
     background-color: antiquewhite;
     color: rgb(71, 71, 71);
     font-family: 'Cormorant Garamond', serif;
+    /* box-shadow: 7px 9px 30px -17px rgba(0, 0, 0, 0.7); */
+    transition: all 1s;
+}
+
+.author:hover {
+    box-shadow: inset 0px 0px 26px -11px rgba(0, 0, 0, 0.75);
+    /* box-shadow: none; */
+    background-color: rgb(210, 249, 193);
+}
+
+.author .author__absolute {
+    position: absolute;
+    right: -25px;
+    top: -10px;
+
+    background-color: #25ab19;
+    padding: 5px;
+    border-radius: 2px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .author .author__img {
@@ -179,4 +216,237 @@ border-left: 20px solid #ff00ae; */
     margin-left: 35%;
     font-weight: 600;
     font-size: 14px;
+}
+
+/* блок с автором */
+
+/* qr-code */
+.qr-code {
+    /* background-color: rgb(223, 254, 254); */
+    max-width: 300px;
+    padding: 15px;
+    margin: 30px auto;
+    border-radius: 15px;
+    border: 1px solid rgb(242, 242, 242);
+    transition: all 0.5s;
+}
+
+.qr-code:hover {
+    box-shadow: 7px 9px 30px -17px rgba(0, 0, 0, 0.7);
+}
+
+.qr-code img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.qr-code h2,
+.qr-code p {
+    text-align: center;
+}
+
+/* qr-code */
+
+/* ссылки */
+a:link {
+    /* непосещенная ссылка */
+    color: orange;
+}
+
+a:visited {
+    /* посещенная ссылка */
+    color: black;
+}
+
+a:hover {
+    /* ссылка при наведении мыши */
+    background-color: rgb(250, 217, 217);
+}
+
+a:active {
+    /* ссылка при нажатии */
+    color: blue;
+}
+
+.numbers {
+    width: 500px;
+    background-color: rgb(221, 249, 249);
+    padding: 20px;
+}
+
+.number {
+    background-color: bisque;
+    margin: 5px;
+    padding: 10px;
+    display: inline-block;
+    /* display: none; */
+}
+
+
+/* absolute */
+.absolute {
+    position: relative;
+
+    max-width: 500px;
+    height: 500px;
+    background-color: blanchedalmond;
+    margin: 30px;
+}
+
+.absolute .child {
+    width: 100px;
+    height: 100px;
+    background-color: chocolate;
+
+    position: absolute;
+    /* left: 200px;
+    top: 100px; */
+    /* right: 100px;
+    bottom: -50px; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* .transition {
+    background-color: cadetblue;
+    max-width: 150px;
+    padding: 12px;
+    margin: auto;
+    border-radius: 15px;
+    position: relative;
+    transition: all 3s;
+}
+
+.transition:hover {
+    -webkit-box-shadow: 14px 42px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 14px 42px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 14px 42px 5px 0px rgba(0, 0, 0, 0.75);
+} */
+
+/* .transition {
+    background-color: black;
+    box-shadow: 7px 9px 30px -17px rgb(15, 9, 193);
+    transition: all 3s;
+}
+
+.transition:hover {
+    background-color: aqua;
+    box-shadow: 7px 9px 30px -17px grey;
+} */
+
+/* .transition {
+    color: blue;
+    background-color: rgb(245, 245, 245);
+    transition: all 1s;
+}
+
+.transition:hover {
+    color: brown;
+    background-color: aqua;
+} */
+
+/* .transition {
+    color: white;
+    background-color: black;
+    transition: all 1s;
+}
+
+.transition:hover {
+    color: black;
+    background: white;
+    box-shadow: 9px 10px 5px 6px rgba(0, 0, 0, 0.37);
+} */
+
+.animation {
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    color: rgb(196, 117, 20);
+    margin: 30px;
+    font-size: 23px;
+    font-weight: 700;
+    position: relative;
+
+    /* animation-name: my-animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite; 
+    animation-delay: 3s;
+    animation-direction: reverse; */
+}
+
+@keyframes my-animation {
+    0% {
+        background-color: greenyellow;
+        color: rgb(196, 117, 20);
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: yellow;
+        color: greenyellow;
+        left: 100px;
+        top: 50px;
+        border-radius: 25%;
+    }
+
+    50% {
+        background-color: blue;
+        color: yellow;
+        left: 200px;
+        top: 100px;
+        border-radius: 50%;
+    }
+
+    75% {
+        background-color: red;
+        color: blue;
+        left: 300px;
+        top: 150px;
+        border-radius: 25%;
+    }
+
+    100% {
+        background-color: greenyellow;
+        color: rgb(196, 117, 20);
+        left: 0px;
+        top: 0px;
+    }
+}
+
+
+.block-info {
+    width: 910px;
+    background-color: bisque;
+}
+
+.block-info .block-item {
+    box-sizing: border-box;
+    width: 300px;
+    height: 50px;
+    background-color: aquamarine;
+    display: inline-block;
+    padding: 20px;
+    border: 5px solid blue;
+}
+
+/**************** flexbox *********************/
+.flex-container {
+    max-width: 600px;
+    background-color: aliceblue;
+    padding: 20px;
+    margin: 100px 0;
+
+    display: flex;
+    /* gap: 20px; */
+    /*расположение по основной оси*/
+    justify-content: space-evenly;
+
+}
+
+.flex-container .flex-element {
+    padding: 20px;
+    background-color: aquamarine;
 }
