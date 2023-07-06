@@ -6,13 +6,42 @@
     margin: 100px 0;
 
     display: flex;
+    /* расстояние между дочерними элементами */
     /* gap: 20px; */
     /*расположение по основной оси*/
     justify-content: space-evenly;
+    /* расположение по второстепенной оси */
+    /* align-items: center; */
+    /* перенос на новую строку*/
+    flex-wrap: wrap;
+    /* расположение осей */
+    /* flex-direction: column; */
 
 }
 
 .flex-container .flex-element {
     padding: 20px;
     background-color: aquamarine;
+}
+
+
+.flex-container-2 {
+    max-width: 1000px;
+    background-color: aliceblue;
+    padding: 20px 0;
+    margin: 100px 0;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-container-2 .flex-element {
+    background-color: chartreuse;
+    padding: 10px;
+}
+
+.flex-container-2 .navigation {
+    display: flex;
+    gap: 15px;
 }
