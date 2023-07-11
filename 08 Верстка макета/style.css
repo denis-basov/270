@@ -97,3 +97,79 @@ main p {
     font-size: 1.4rem;
     font-weight: bold;
 }
+
+/*************************************************************************/
+/****************************** resume ***********************************/
+/*************************************************************************/
+
+.resume {
+    grid-template-columns: 15rem 0.2rem 35rem;
+    column-gap: 2rem;
+}
+
+/* .resume .resume-date {
+    padding-right: 3rem;
+    border-right: 2px solid #A60AC7;
+} */
+
+.resume .resume-date h2 {
+    color: #5D3974;
+    text-align: right;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.resume .resume-date p {
+    color: #575757;
+    text-align: right;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.resume .resume-border {
+    border-radius: 1rem;
+    background: #A60AC7;
+    box-shadow: 0rem 0.4rem 0.4rem 0rem #A60AC7;
+}
+
+.resume .resume-info {
+    padding: 1rem;
+}
+
+.resume .resume-info h1 {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 158.5%;
+    margin-bottom: 1rem;
+}
+
+.resume .resume-info ul {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 2rem;
+}
+
+.resume .resume-info ul li {
+    list-style-type: disc;
+    line-height: 158.5%;
+}
+
+
+/*************************************************************************/
+/****************************** gallery **********************************/
+/*************************************************************************/
+.gallery {
+    grid-template-columns: 22.3rem 22.3rem;
+    gap: 2rem;
+}
+
+.gallery .gallery-img img {
+    width: 100%;
+    border-radius: 10px;
+    /* Purple Glow Light */
+    box-shadow: 0px 0px 10px 0px rgba(166, 10, 199, 0.30);
+}
