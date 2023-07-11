@@ -18,4 +18,82 @@ body {
     background-image: url('images/background-image.png');
     background-repeat: no-repeat;
     background-position: left bottom;
+    padding: 1rem;
+}
+
+
+/*************************************************************************/
+/****************************** header ***********************************/
+/*************************************************************************/
+header {
+    max-width: 144rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem;
+}
+
+header .logo {
+    font-size: 2.7rem;
+}
+
+header nav {
+    display: flex;
+    padding: 1rem 3.6rem;
+    gap: 3.2rem;
+}
+
+header nav a {
+    display: inline-block;
+    padding: 1.2rem 2rem;
+    font-size: 1.4rem;
+    color: #E8E8E8;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+header nav a:hover {
+    background-color: #402166;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 2.6rem;
+}
+
+/*************************************************************************/
+/****************************** main *************************************/
+/*************************************************************************/
+
+main {
+    max-width: 144rem;
+    padding: 2rem 12rem;
+    display: grid;
+    grid-template-columns: 50rem;
+    justify-content: end;
+    font-size: 1.6rem;
+    row-gap: 3rem;
+}
+
+main .title .top {
+    color: #5D3974;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+main .title h1 {
+    font-size: 5.2rem;
+    line-height: 1;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+main .title .bottom {
+    color: #575757;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+main p {
+    color: #C0C0C0;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 1.4rem;
+    font-weight: bold;
 }
