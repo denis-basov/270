@@ -96,3 +96,92 @@
 
 // // car = "Volvo";
 // console.log(car);
+
+/**
+ * операции сравнения
+ */
+// let bool = 3 < 9;
+// console.log(bool);
+
+// let password = "12345";
+// console.log(password.length >= 6);
+
+// const password = "123456";
+// let passLen = password.length; // 6
+
+// console.log(passLen >= 6);
+// console.log(`В строке "${password}" ${passLen} символов`);
+
+// const password = "9999"; // системный пароль
+// let userPass = "9999"; // пароль от клиента
+// console.log(password == userPass);
+
+// '4' !== 4
+
+/*
+// И (&&)
+5 > 4 && 6 > 3
+true
+2 > 4 && 6 > 3
+false
+5 > 4 && 2 > 3
+false
+3 > 4 && 2 > 3
+false
+*/
+
+/*
+// учетные данные для входа
+let login = "admin";
+let password = "1234";
+
+// предоставленные данные при входе
+let userLogin = "admin";
+let userPass = "1234";
+
+// проверяем данные
+let result = userLogin === login && userPass === password;
+
+console.log(result);
+*/
+
+/**
+ * ИЛИ (||)
+ */
+/*
+7 > 5 || 4 < 8
+true
+1 > 5 || 4 < 8
+true
+7 > 5 || 9 < 8
+true
+2 > 5 || 9 < 8
+false
+*/
+
+/*
+let age = 65;
+
+let result = age < 5 || age >= 64;
+console.log(result);
+*/
+
+// НЕ (!)
+// let password = "123456";
+
+// // получить истину, если длина пароля не равна нулю
+// console.log(password.length !== 0);
+/*
+!false
+true
+!true
+false
+!0
+true
+!4
+false
+!'привет'
+false
+!'r'
+false
+*/
