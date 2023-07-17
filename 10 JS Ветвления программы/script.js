@@ -1,3 +1,5 @@
+"use strict";
+
 // let userName = "admin";
 
 // // если логин верный
@@ -78,3 +80,42 @@ if (firstName.length > 0) {
 //   console.log("Введите логин");
 // }
 // console.log(login);
+
+/*
+// получить сумму чисел (1+2+3)
+let myNumber = 526;
+
+myNumber = String(myNumber); // переводим число в строку '123'
+
+//let result = Number(myNumber[0]) + Number(myNumber[1]) + Number(myNumber[2]); // складываем числа в строке
+let result = +myNumber[0] + +myNumber[1] + +myNumber[2]; // складываем числа в строке
+console.log(result);*/
+
+// let userName = "admin";
+
+// if (userName === "admin") {
+//   console.log("Доступ разрешен");
+// } else {
+//   console.log("Логин неверен");
+// }
+
+// // тернарный оператор
+// userName === "admin" ? console.log("Доступ разрешен") : console.log("Логин неверен");
+
+/*
+let age = 4;
+
+if (age >= 18) {
+  console.log("Добро пожаловать");
+} else {
+  console.log("Надо подрасти");
+}
+
+// age >= 18 ? console.log("Добро пожаловать") : console.log("Надо подрасти");
+
+let result = age >= 18 ? "Добро пожаловать" : "Надо подрасти";
+console.log(result);*/
+
+// let age = 77;
+// console.log(age);
+// console.log(window);
