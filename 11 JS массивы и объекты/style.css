@@ -1,0 +1,22 @@
+.user {
+    display: flex;
+    justify-content: space-around;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgb(206, 231, 254);
+    border-radius: 8px;
+}
+
+.user .avatar {
+    max-width: 300px;
+}
+
+.user .avatar img {
+    width: 100%;
+}
+
+.user .address {
+    background-color: rgb(174, 214, 201);
+    padding: 5px 10px;
+
+}
