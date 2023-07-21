@@ -244,7 +244,7 @@
 // }
 // console.log(multiple);
 
-let cats = ["Барсик", "Мурка", "Тимоха", "Антоха", "Толик"];
+//let cats = ["Барсик", "Мурка", "Тимоха", "Антоха", "Толик"];
 
 // for (let i = 0; i < cats.length; i++) {
 //   console.log(cats[i]);
@@ -280,4 +280,114 @@ let cats = ["Барсик", "Мурка", "Тимоха", "Антоха", "То�
 // for (let cat of cats) {
 //   console.log(cat);
 //   i++;
+// }
+
+// получить строку из массива
+// let cats = ["Барсик", "Мурка", "Тимоха", "Антоха", "Толик"];
+// let catsStr = "";
+
+// for (let cat of cats) {
+//   catsStr += `<li>${cat}</li>`;
+// }
+// console.log(catsStr);
+// document.write(catsStr);
+
+// получить строку из массива объектов
+let authors = [
+  {
+    author_id: 1,
+    first_name: "Иван",
+    last_name: "Бунин",
+  },
+  {
+    author_id: 2,
+    first_name: "Лев",
+    last_name: "Толстой",
+  },
+  {
+    author_id: 3,
+    first_name: "Александр",
+    last_name: "Пушкин",
+  },
+  {
+    author_id: 4,
+    first_name: "Федор",
+    last_name: "Достоевский",
+  },
+  {
+    author_id: 5,
+    first_name: "Максим",
+    last_name: "Горький",
+  },
+  {
+    author_id: 6,
+    first_name: "Николай",
+    last_name: "Гоголь",
+  },
+];
+
+// for (let author of authors) {
+//   let authorStr = `<h2>Идентификатор: ${author.author_id}. Имя: ${author.first_name}. Фамилия: ${author.last_name}.</h2>`;
+
+//   console.log(authorStr);
+// }
+
+// let authorsStr = "";
+// for (let author of authors) {
+//   authorsStr += `<h2>Идентификатор: ${author.author_id}. Имя: ${author.first_name}. Фамилия: ${author.last_name}.</h2>`;
+// }
+// console.log(authorsStr);
+// document.write(authorsStr);
+
+// let authorsStr = `<div class="authors">`;
+// for (let author of authors) {
+//   authorsStr += `
+//         <div class="author">
+//             <h2>Имя: <span>${author.first_name}</span></h2>
+//             <h3>Фамилия: <span>${author.last_name}</span></h3>
+//             <p>Идентификатор: <span>${author.author_id}</span></p>
+//         </div>
+//   `;
+// } // конец цикла
+// authorsStr += `</div>`;
+
+// document.write(authorsStr);
+
+// let authorsStr = ``;
+// for (let author of authors) {
+//   authorsStr += `
+//         <div class="author">
+//             <h2>Имя: <span>${author.first_name}</span></h2>
+//             <h3>Фамилия: <span>${author.last_name}</span></h3>
+//             <p>Идентификатор: <span>${author.author_id}</span></p>
+//         </div>
+//   `;
+// }
+
+// let container = document.querySelector("#container");
+// container.insertAdjacentHTML("beforeend", authorsStr);
+
+// let user = {
+//   firstName: "Иван",
+//   lastName: "Иванов",
+//   age: 22,
+//   hobby: "Читать",
+//   isAdmin: true,
+//   avatar: "images/ivanov.jpg",
+//   country: "Россия",
+// };
+
+// for (let key in user) {
+//   console.log(`Ключ: ${key}. Значение: ${user[key]}`);
+// }
+
+// let author = {
+//   author_id: 1,
+//   first_name: "Иван",
+//   last_name: "Бунин",
+// };
+// // переберите объект в цикле и выведите все значения в консоль
+
+// for (let key in author) {
+//   console.log(`<p>${key}: ${author[key]}</p>`);
 // }

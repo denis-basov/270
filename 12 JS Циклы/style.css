@@ -1,0 +1,20 @@
+.authors {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    background-color: aquamarine;
+    padding: 20px;
+}
+
+.authors .author {
+    background-color: azure;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.authors .author span {
+    color: brown;
+    font-style: italic;
+}
