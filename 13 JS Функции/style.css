@@ -1,0 +1,7 @@
+.bill-info {
+    background-color: rgb(205, 231, 255);
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
