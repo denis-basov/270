@@ -165,26 +165,30 @@
 
 // 2. Напишите функцию, которая принимает на вход любой одномерный массив, и считает сумму, если в массиве числа, и складывает массив в строку, если в элементах массива строки. Функция должна возвращать результат. Если не все элементы числа или строки в массиве, то возвращать сообщение об ошибке.
 
-let nums = [1, 2, 3, 4, 8, 3, 1];
-let fruits = ["Киви", "Ананас", "Кокос", "Апельсин", "Банан", "Яблоко"];
-let pets = ["cat", "dog", "bat", "mouse", "pig", "goat", "sheep", "cow", "chicken"];
-let cats = ["Барсик", "Мурка", "Тимоха", "Антоха", "Толик"];
+// let nums = [1, 2, 3, 4, 8, 3, 1, 55];
+// let fruits = ["Киви", "Кокос", "Апельсин", "Банан", "Яблоко"];
+// let pets = ["cat", "dog", "bat", "mouse", "pig", "goat", "sheep", "cow", "chicken"];
+// let cats = ["Барсик", "Мурка", "Тимоха", "Антоха", "Толик"];
 
 // 2. Решение
 // 2.1 Проверяем, что в массиве все элементы являются числами
 // если все элементы - числа, то складываем значения
 // если хотя бы один элемент не числовой, то возвращаем ошибку
+/*
 function summArr(arr) {
   // проверяем, что в массиве все знаяения являются числами
-  let isAllNumbers = true;
+  let isAllNumbers = true; // флаг
   for (let value of arr) {
-    // если НЕ число, ошибка
+    // если НЕ число
     if (typeof value !== "number") {
+      // меняем значение флага на false
       isAllNumbers = false;
       break;
     }
   }
+  // если все значения в массиве числовые
   if (isAllNumbers) {
+    // считаем сумму
     let sum = 0;
     for (let num of arr) {
       sum += num;
@@ -195,6 +199,31 @@ function summArr(arr) {
   }
 }
 console.log(summArr(nums));
+*/
+
+// let fruits = ["Киви", "Кокос", "Ананас", "Апельсин", "Банан", "Яблоко"];
+// Задача: если в массиве fruits есть элемент со значением "Ананас"
+// вывести в консоль, что такое значение есть
+// если такого элемента нет, то вывести сообщение о том,
+// что такого элемента нет
+
+// предполагаем, что искомого элемента в массиве нет
+// let isAnanasInArray = false; // флаг
+
+// for (let fruit of fruits) {
+//   // если находим искомый элемент в массиве
+//   if (fruit === "Ананас") {
+//     // меняем значение флага на истину. Это означает, что элемент найден
+//     isAnanasInArray = true;
+//     break;
+//   }
+// }
+
+// if (isAnanasInArray) {
+//   console.log("Ананас в массиве есть");
+// } else {
+//   console.log("Ананас в массиве отсутствует");
+// }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -403,3 +432,43 @@ document.write(makeBillInfo(summBill2, totalBillTip2));
 //   },
 // };
 // user.getInfo();
+
+let nums = [1, 2, 3, 4, 8, 3, 1, 55];
+let fruits = ["Киви", "Кокос", "Апельсин", "Банан", "Яблоко"];
+let pets = ["cat", "dog", "bat", "mouse", "pig", "goat", "sheep", "cow", "chicken"];
+let cats = ["Барсик", "Мурка", "Тимоха", "Антоха", "Толик"];
+
+// function sumMe(arr) {
+//   let summ = 0;
+
+//   for (let cell of arr) {
+//     if (typeof cell === "number") {
+//       summ += cell;
+//     } else {
+//       return "В массиве есть значение не числового типа";
+//     }
+//   }
+
+//   return summ;
+// }
+// console.log(sumMe(nums));
+
+/*
+let total = 0;
+
+function getSum(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+      total = total + arr[i];
+    } else if (typeof arr[i] === "string") {
+      total = arr.join(", ");
+    } else {
+      console.log("error");
+    }
+  }
+  return total;
+}
+
+getSum(fruits);
+console.log(total);
+*/
