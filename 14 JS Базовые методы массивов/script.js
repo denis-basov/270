@@ -121,13 +121,13 @@ console.log(arr1);
 console.log(arr2);
 */
 
-let cats = ["Барсик", "Мурка", "Тимоха", "Антоха", "Толик"];
-let users = ["Иван", "Анна", "Ирина", "Петр"];
-let nums = [1, 2, 3, 4, 5, 6, 7, 5, 4, 3, 2];
-let random = [44, "hello", null, undefined, true, 0, "", [1, 2, 3]];
-let fruits = ["Киви", "Ананас", "Кокос", "Апельсин", "Банан", "Яблоко"];
-let pets = ["cat", "dog", "bat", "mouse", "pig", "goat", "sheep", "cow", "chicken"];
-let animals = ["ant", "bison", "camel", "duck", "elephant", "cat", "dog"];
+// let cats = ["Барсик", "Мурка", "Тимоха", "Антоха", "Толик"];
+// let users = ["Иван", "Анна", "Ирина", "Петр"];
+// let nums = [1, 2, 3, 4, 5, 6, 7, 5, 4, 3, 2];
+// let random = [44, "hello", null, undefined, true, 0, "", [1, 2, 3]];
+// let fruits = ["Киви", "Ананас", "Кокос", "Апельсин", "Банан", "Яблоко"];
+// let pets = ["cat", "dog", "bat", "mouse", "pig", "goat", "sheep", "cow", "chicken"];
+// let animals = ["ant", "bison", "camel", "duck", "elephant", "cat", "dog"];
 
 // slice
 // let newArr = users.slice(); // копируем весь массив
@@ -193,3 +193,34 @@ console.log(newPets);
 // let delFruits = fruits.splice(4, 1, "Алыча", "Слива"); // начиная со 4 инд удаляем 1 элемент и добавляем 2 новых элемента
 // console.log("Исходный массив", fruits);
 // console.log("Массив удаленных элементов", delFruits);
+
+let cats = ["Барсик", "Мурка", "Тимоха", "Антоха", "Толик"];
+let users = ["Иван", "Анна", "Ирина", "Петр"];
+let nums = [1, 2, 3, 4, 5, 6, 7, 5, 4, 3, 2];
+let random = [44, "hello", null, undefined, true, 0, "", [1, 2, 3]];
+let fruits = ["Киви", "Ананас", "Кокос", "Апельсин", "Банан", "Яблоко"];
+let pets = ["cat", "dog", "bat", "mouse", "pig", "goat", "sheep", "cow", "chicken"];
+let animals = ["ant", "bison", "camel", "duck", "elephant", "cat", "dog"];
+
+// sort
+// fruits.sort();
+// pets.sort();
+
+// console.log(fruits);
+// console.log(pets);
+
+// let randNumbers = [2, 11, 118, 1, 14, 24, 35, 33, 17, 15, 26, 44, 58, 47];
+
+// randNumbers.sort();
+// console.log(randNumbers);
+
+/**
+ * строки
+ */
+
+// let userName = "Ivan";
+// console.log(userName.length);
+
+// let str = "Метод slice() извлекает часть строки и возвращает новую строку без изменения оригинальной строки.";
+// let newStr = str.slice(6, 13);
+// console.log(newStr);
