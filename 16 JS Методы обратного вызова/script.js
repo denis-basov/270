@@ -88,38 +88,38 @@
 // let newAnimals = animals.map((animal) => animal.toUpperCase());
 // console.log(newAnimals);
 
-let authors = [
-  {
-    author_id: 1,
-    first_name: "Иван",
-    last_name: "Бунин",
-  },
-  {
-    author_id: 2,
-    first_name: "Лев",
-    last_name: "Толстой",
-  },
-  {
-    author_id: 3,
-    first_name: "Александр",
-    last_name: "Пушкин",
-  },
-  {
-    author_id: 4,
-    first_name: "Федор",
-    last_name: "Достоевский",
-  },
-  {
-    author_id: 5,
-    first_name: "Максим",
-    last_name: "Горький",
-  },
-  {
-    author_id: 6,
-    first_name: "Николай",
-    last_name: "Гоголь",
-  },
-];
+// let authors = [
+//   {
+//     author_id: 1,
+//     first_name: "Иван",
+//     last_name: "Бунин",
+//   },
+//   {
+//     author_id: 2,
+//     first_name: "Лев",
+//     last_name: "Толстой",
+//   },
+//   {
+//     author_id: 3,
+//     first_name: "Александр",
+//     last_name: "Пушкин",
+//   },
+//   {
+//     author_id: 4,
+//     first_name: "Федор",
+//     last_name: "Достоевский",
+//   },
+//   {
+//     author_id: 5,
+//     first_name: "Максим",
+//     last_name: "Горький",
+//   },
+//   {
+//     author_id: 6,
+//     first_name: "Николай",
+//     last_name: "Гоголь",
+//   },
+// ];
 
 // получить массив с фамилиями авторов
 // в переменную author помещаются все элементы массива поочередно (объекты)
@@ -271,32 +271,32 @@ let animals = ["ant", "bison", "camel", "duck", "elephant", "cat", "dog"];
 // console.log(pets);
 // console.log(longPets);
 
-let shopItems = [
-  {
-    item: "book",
-    qty: 5,
-    price: 200,
-    inStock: true,
-  },
-  {
-    item: "table",
-    qty: 3,
-    price: 1000,
-    inStock: true,
-  },
-  {
-    item: "PC",
-    qty: 1,
-    price: 3000,
-    inStock: true,
-  },
-  {
-    item: "chair",
-    qty: 2,
-    price: 1500,
-    inStock: true,
-  },
-];
+// let shopItems = [
+//   {
+//     item: "book",
+//     qty: 5,
+//     price: 200,
+//     inStock: true,
+//   },
+//   {
+//     item: "table",
+//     qty: 3,
+//     price: 1000,
+//     inStock: true,
+//   },
+//   {
+//     item: "PC",
+//     qty: 1,
+//     price: 3000,
+//     inStock: true,
+//   },
+//   {
+//     item: "chair",
+//     qty: 2,
+//     price: 1500,
+//     inStock: true,
+//   },
+// ];
 // получите все товары, которые заказаны в количестве от 2 штук
 // let orderedGoods = shopItems.filter(function (product) {
 //   return product.qty > 2;
@@ -347,14 +347,170 @@ console.log(res3);
 // reduce
 // получаем сумму элементов массива
 // let nums = [1, 2, 3, 4, 5, 6, 7, 5, 4, 3, 2];
-let sum = nums.reduce(function (acc, currVal) {
-  //console.log(`acc: ${acc}. currVal: ${currVal}. return: ${acc + currVal}`);
-  return acc + currVal;
-});
-console.log(sum);
+// let sum = nums.reduce(function (acc, currVal) {
+//   console.log(`acc: ${acc}. currVal: ${currVal}. return: ${acc + currVal}`);
+//   return acc + currVal;
+// });
+// console.log(sum);
 
-let sum1 = animals.reduce(function (acc, currVal) {
-  //console.log(`acc: ${acc}. currVal: ${currVal}. return: ${acc + currVal}`);
-  return acc + currVal + " ";
-});
-console.log(sum1);
+// let animals = ["ant", "bison", "camel", "duck", "elephant", "cat", "dog"];
+// let sum1 = animals.reduce(function (acc, currVal) {
+//   //console.log(`acc: ${acc}. currVal: ${currVal}. return: ${acc + currVal}`);
+//   return acc + currVal + " ";
+// });
+// console.log(sum1);
+
+let authors = [
+  {
+    author_id: 1,
+    first_name: "Иван",
+    last_name: "Бунин",
+  },
+  {
+    author_id: 2,
+    first_name: "Лев",
+    last_name: "Толстой",
+  },
+  {
+    author_id: 3,
+    first_name: "Александр",
+    last_name: "Пушкин",
+  },
+  {
+    author_id: 4,
+    first_name: "Федор",
+    last_name: "Достоевский",
+  },
+  {
+    author_id: 5,
+    first_name: "Максим",
+    last_name: "Горький",
+  },
+  {
+    author_id: 6,
+    first_name: "Николай",
+    last_name: "Гоголь",
+  },
+];
+
+// получите строку с фамилиями авторов
+// let strBookGuys = authors.reduce(function (accBookGuy, currBookGuy) {
+//   console.log(accBookGuy);
+//   return `${accBookGuy.last_name ?? accBookGuy} ${currBookGuy.last_name}`;
+// });
+
+// console.log(strBookGuys);
+
+// let strBookGuys = authors.reduce(function (accBookGuy, currBookGuy) {
+//   return `${accBookGuy} ${currBookGuy.last_name}`;
+// }, "");
+
+// console.log(strBookGuys);
+
+// let sum222 = [];
+// for (let i = 0; i < authors.length; i++) {
+//   sum222.push(authors[i].last_name);
+// }
+// console.log(sum222);
+
+// let sum333 = sum222.reduce(function (last_name, currVal) {
+//   return last_name + ", " + currVal;
+// });
+// console.log(sum333);
+
+let shopItems = [
+  {
+    item: "book",
+    qty: 5,
+    price: 200,
+    inStock: true,
+  },
+  {
+    item: "table",
+    qty: 3,
+    price: 1000,
+    inStock: true,
+  },
+  {
+    item: "PC",
+    qty: 1,
+    price: 3000,
+    inStock: true,
+  },
+  {
+    item: "chair",
+    qty: 2,
+    price: 1500,
+    inStock: true,
+  },
+];
+
+// посчитайте общую сумму по корзине
+// let total = shopItems.reduce(function (acc, currVal) {
+//   return acc + currVal.price * currVal.qty;
+// }, 0);
+// console.log(total);
+
+// let total = shopItems.reduce((acc, currVal) => acc + currVal.price * currVal.qty, 0);
+// console.log(total);
+
+// получение максимального значения
+// let nums = [1, 2, 3, 4, 5, 6, 7, 5, 4, 3, 2];
+// let max = nums.reduce(function (max, currVal) {
+//   // если значение текущего элемента больше текущего максимума
+//   if (currVal > max) {
+//     // возвращаем значение текущего элемента
+//     return currVal;
+//   } else {
+//     // иначе, передаем дальше текущий максимум
+//     return max;
+//   }
+// });
+
+// let max = nums.reduce(function (max, currVal) {
+//   return currVal > max ? currVal : max;
+// });
+// console.log(max);
+
+// let max = nums.reduce(function (max, currVal) {
+//   return Math.max(max, currVal);
+// });
+// console.log(max);
+
+// let max = nums.reduce((max, currVal) => Math.max(max, currVal));
+// console.log(max);
+
+// let nums = [1, 2, 3, 4, 5, 6, 7, 5, 4, 3, 2];
+// получите минимальный елемент массива
+
+// let min = nums.reduce((min, carrValue) => Math.min(min, carrValue));
+// console.log(min);
+
+// let min = nums.reduce(function (min, currVal) {
+//   if (currVal < min) return currVal;
+//   return min;
+// });
+// console.log(min);
+
+// let min = nums.reduce(function (min, curVal) {
+//   return curVal < min ? curVal : min;
+// });
+// console.log(min);
+
+// console.log(Math.max(...[3, 5, 7, 3, 7, 9, 3, 1, 7]));
+// console.log(...[3, 5, 7, 3, 7, 9, 3, 1, 7]);
+
+// let nums2 = [22, 25, 2, 25, 16, 14, 11, 1, 44, 34, 45, 66];
+
+// nums2.sort(function (a, b) {
+//   return a - b;
+//   // 1. 22 - 25 = -3
+//   // 2. 25 - 2  = 23
+// });
+// console.log(nums2);
+
+// nums2.sort(function (a, b) {
+//   return b - a;
+//   // 1. 25 - 22 = 3
+// });
+// console.log(nums2);

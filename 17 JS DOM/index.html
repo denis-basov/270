@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <h1 id="head-1" class="head">DOM JS</h1>
+    <h2 id="head-2" class="head">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, dicta?</h2>
+
+    <ul class="list">
+      <li>Хлеб</li>
+      <li>Молоко</li>
+      <li>Мясо</li>
+      <li>Творог</li>
+      <li>Кисель</li>
+    </ul>
+
+    <img
+      src="https://images.unsplash.com/photo-1688019983766-216c6a06fe0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+      width="300"
+      alt="Горы, озеро"
+    />
+    <img src="https://bipbap.ru/wp-content/uploads/2017/04/000f_7290754.jpg" width="300" alt="радужный водопад" />
+
+    <div id="users" class="users">
+      <!-- контейнер для пользователей -->
+      <div class="user">
+        <h2>Имя: Иван</h2>
+        <h3>Фамилия: Иванов</h3>
+        <p>Возраст: 22 года</p>
+        <p>Хобби: Гулять</p>
+      </div>
+
+      <div class="user">
+        <h2>Имя: Петр</h2>
+        <h3>Фамилия: Петров</h3>
+        <p>Возраст: 11 года</p>
+        <p>Хобби: Спать</p>
+      </div>
+
+      <div class="user">
+        <h2>Имя: Ирина</h2>
+        <h3>Фамилия: Петрова</h3>
+        <p>Возраст: 16 года</p>
+        <p>Хобби: Вязать</p>
+      </div>
+    </div>
+
+    <form>
+      <label for="firstName">Имя:</label>
+      <input type="text" id="firstName" name="firstName" placeholder="Введите имя..." /><br />
+
+      <label for="lastName">Фамилия:</label>
+      <input type="text" id="lastName" name="lastName" placeholder="Введите фамилию" /><br />
+
+      <label for="login">Имя пользователя:</label>
+      <input type="text" id="login" placeholder="Латинские буквы и цифры" /><br />
+
+      <label>Адрес электронной почты:</label>
+      <input type="email" placeholder="example@name.ru" /><br />
+
+      <label>Пароль:</label>
+      <input type="password" size="30" placeholder="Минимум 8 произвольных символов" /><br />
+
+      <label>Аватар:</label>
+      <input type="file" /><br />
+
+      <input type="submit" value="Реристрация" />
+    </form>
+  </body>
+</html>
