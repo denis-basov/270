@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM</title>
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <button id="press-btn">Нажми меня</button>
@@ -21,6 +22,7 @@
       <li>Творог</li>
       <li>Кисель</li>
       <li>Мука</li>
+      <li>Сода</li>
     </ul>
 
     <ol class="o-list"></ol>
@@ -36,21 +38,21 @@
 
     <div id="users" class="users">
       <!-- контейнер для пользователей -->
-      <div class="user">
+      <div class="user user-1">
         <h2>Имя: Иван</h2>
         <h3>Фамилия: Иванов</h3>
         <p>Возраст: 22 года</p>
         <p>Хобби: Гулять</p>
       </div>
 
-      <div class="user">
+      <div class="user user-2">
         <h2>Имя: Петр</h2>
         <h3>Фамилия: Петров</h3>
         <p>Возраст: 11 года</p>
         <p>Хобби: Спать</p>
       </div>
 
-      <div class="user">
+      <div class="user user-3">
         <h2>Имя: Ирина</h2>
         <h3>Фамилия: Петрова</h3>
         <p>Возраст: 16 года</p>
@@ -60,13 +62,16 @@
 
     <form>
       <label for="firstName">Имя:</label>
-      <input type="text" id="firstName" name="firstName" placeholder="Введите имя..." /><br />
+      <input type="text" id="firstName" name="firstName" placeholder="Введите имя..." />
+      <span id="firstNameError" class="error"></span><br />
 
       <label for="lastName">Фамилия:</label>
-      <input type="text" id="lastName" name="lastName" placeholder="Введите фамилию" /><br />
+      <input type="text" id="lastName" name="lastName" placeholder="Введите фамилию" />
+      <span id="lastNameError" class="error"></span><br />
 
       <label for="login">Имя пользователя:</label>
-      <input type="text" id="login" placeholder="Латинские буквы и цифры" /><br />
+      <input type="text" id="login" placeholder="Латинские буквы и цифры" />
+      <span id="loginError" class="error"></span><br />
 
       <label>Адрес электронной почты:</label>
       <input type="email" placeholder="example@name.ru" /><br />
@@ -77,7 +82,7 @@
       <label>Аватар:</label>
       <input type="file" /><br />
 
-      <input type="submit" value="Реристрация" />
+      <input id="submit-btn" type="submit" value="Регистрация" />
     </form>
   </body>
 </html>

@@ -1,0 +1,10 @@
+.error {
+    color: red;
+}
+
+.user-style {
+    color: rgb(58, 57, 136);
+    background-color: rgb(222, 245, 245);
+    border-radius: 20px;
+    padding: 20px;
+}
