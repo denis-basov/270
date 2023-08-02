@@ -8,13 +8,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button id="press-btn">Нажми меня</button>
+    <button id="press-btn" class="myButton">Нажми меня</button>
+    <div id="main-user" class="main-user">
+      <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80" alt="user" />
+      <h3>Irene Strong</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, hic.</p>
+    </div>
+
+    <div id="container">
+      <!-- контейнер для вставки -->
+    </div>
 
     <h1 id="head-1" class="head">DOM JS</h1>
     <h2 id="head-2" class="head">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, dicta?</h2>
     <h3 id="head-3" class="head">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dicta itaque aperiam hic quis placeat iste. Maiores blanditiis dolorum alias?</h3>
     <a href="https://unsplash.com/">unsplash</a>
-
+    <hr />
+    <button id="add-to-list">Добавить</button>
     <ul class="list">
       <li>Хлеб</li>
       <li>Молоко</li>
@@ -84,5 +94,45 @@
 
       <input id="submit-btn" type="submit" value="Регистрация" />
     </form>
+
+    <div class="shop-items">
+      <div class="shop-item">
+        <img
+          src="https://images.unsplash.com/photo-1494578379344-d6c710782a3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+          alt="платье 1"
+        />
+        <h3>Платье 1</h3>
+        <p>5000$</p>
+        <button id="shop-item-btn-1">В корзину</button>
+      </div>
+      <div class="shop-item">
+        <img
+          src="https://images.unsplash.com/photo-1502868354157-ec2edd2a1651?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80"
+          alt="платье 2"
+        />
+        <h3>Платье 2</h3>
+        <p>3000$</p>
+        <button id="shop-item-btn-2">В корзину</button>
+      </div>
+      <div class="shop-item">
+        <img
+          src="https://images.unsplash.com/photo-1568251188392-ae32f898cb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1462&q=80"
+          alt="платье 3"
+        />
+        <h3>Платье 3</h3>
+        <p>2000$</p>
+        <button id="shop-item-btn-3">В корзину</button>
+      </div>
+      <div class="shop-item">
+        <img
+          src="https://images.unsplash.com/photo-1499939667766-4afceb292d05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80"
+          alt="платье 4"
+        />
+        <h3>Платье 4</h3>
+        <p>4000$</p>
+        <button id="shop-item-btn-4">В корзину</button>
+      </div>
+    </div>
+    <div id="total-price"></div>
   </body>
 </html>

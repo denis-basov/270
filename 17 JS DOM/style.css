@@ -8,3 +8,74 @@
     border-radius: 20px;
     padding: 20px;
 }
+
+/* button */
+.myButton {
+    box-shadow: 0px 10px 14px -7px #276873;
+    background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+    background-color: #599bb3;
+    border-radius: 28px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 17px 46px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #3d768a;
+}
+
+.myButton:hover {
+    background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+    background-color: #408c99;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+/* main-user */
+.main-user {
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    border: 3px solid rgb(202, 230, 255);
+}
+
+.main-user img {
+    width: 100%;
+}
+
+/* hidden */
+.hidden {
+    display: none;
+}
+
+/* shop-items */
+.shop-items {
+    max-width: 1000px;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.shop-items .shop-item {
+    background-color: aliceblue;
+    padding: 10px;
+    border: rgb(224, 241, 255);
+    border-radius: 10px;
+}
+
+.shop-items .shop-item img {
+    width: 100%;
+}
+
+.new-div {
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+}

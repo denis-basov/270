@@ -408,7 +408,7 @@ let user1 = document.querySelector(".users .user-1");
 
 // console.log(user1.classList[0]);
 // console.log(user1.classList.value);
-console.log(user1.classList);
+// console.log(user1.classList);
 
 user1.addEventListener("click", function () {
   // добавляем класс при клике на элемент
@@ -417,7 +417,6 @@ user1.addEventListener("click", function () {
   // user1.classList.remove("user", "user-1");
   // проверка наличия класса у элемента
   // console.log(user1.classList.contains("user-1"));
-
   // если класс есть
   // if (user1.classList.contains("user-style")) {
   //   // удаляем класс
@@ -426,6 +425,129 @@ user1.addEventListener("click", function () {
   //   // если класса нет, добавляем
   //   user1.classList.add("user-style");
   // }
+  // user1.classList.contains("user-style") ? user1.classList.remove("user-style") : user1.classList.add("user-style");
 
-  user1.classList.contains("user-style") ? user1.classList.remove("user-style") : user1.classList.add("user-style");
+  // toggle
+  user1.classList.toggle("user-style");
+});
+
+// показать/скрыть блок разметки
+let pressBtn = document.querySelector("#press-btn");
+let mainUser = document.querySelector("#main-user");
+
+// при клике на кнопку скрываем юзера
+pressBtn.addEventListener("click", function () {
+  mainUser.classList.toggle("hidden");
+});
+
+////////////////////////////////////////////////////////////////////////////////////
+
+/*
+// добавление товара в корзину
+let shopItemBtn1 = document.querySelector("#shop-item-btn-1");
+
+shopItemBtn1.addEventListener("click", addToCart);
+*/
+
+/////////////////////////////////////////////////////////////////////////////////////
+// добавление товаров в корзину в цикле
+// создаем массив для корзины
+let cart = [];
+
+// получаем все кнопки у товаров
+let shopItemsBtns = document.querySelectorAll(".shop-items .shop-item button");
+// получаем элемент для вывода суммы товаров в корзине
+let totalPriceEl = document.querySelector("#total-price");
+
+// функция обработчик для добавления товара в корзину
+function addToCart() {
+  // получаем родителя кнопки
+  let parentEl = this.parentElement;
+
+  // получаем предыдущего соседа (параграф с ценой)
+  let prevEl = this.previousElementSibling;
+
+  // получаем значение цены из параграфа и приводим к числу
+  let price = parseInt(prevEl.textContent);
+
+  // если добавляется товар в корзину, меняем стили у кнопки и у родителя
+  if (this.textContent === "В корзине") {
+    // возвращаем начальные значения
+    this.textContent = "В корзину";
+    this.style.background = "rgb(240, 240, 240)";
+    parentEl.style.background = "aliceblue";
+  } else {
+    // меняем стили и текст кнопки и контейнера
+    this.textContent = "В корзине";
+    this.style.background = "#44c767";
+    parentEl.style.background = "rgb(131, 195, 251)";
+
+    // при добавлении товара в корзину добавить цену в массив cart
+    cart.push(price);
+    console.log(cart);
+
+    // считаем сумму товаров в массиве cart
+    let totalPrice = cart.reduce((acc, value) => acc + value);
+
+    // отображаем общую сумму в документе
+    totalPriceEl.innerHTML = `<h3>Сумма товаров в корзине: ${totalPrice}$</h3>`;
+  }
+}
+
+// перебираем кнопки в цикле
+shopItemsBtns.forEach(function (button) {
+  // вешаем обработчик события по клику на каждую кнопку
+  button.addEventListener("click", addToCart);
+});
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+// createElement
+// let head1 = document.querySelector("#head-1");
+// console.log(head1);
+
+// создаем новый div
+// let newDiv = document.createElement("div");
+// newDiv.innerHTML = "<p>Maiores blanditiis dolorum alias?</p>";
+// newDiv.id = "new-div";
+// newDiv.classList.add("new-div");
+// newDiv.style.background = "red";
+// newDiv.style.color = "blue";
+
+// получаем значения атрибутов
+// console.log(newDiv.getAttribute("id"));
+// console.log(newDiv.getAttribute("class"));
+// console.log(newDiv.getAttribute("style"));
+
+// устанавливаем значения атрибутов
+// newDiv.setAttribute("id", "created-div");
+// newDiv.setAttribute("class", "created-div");
+
+// получаем элемент для вставки данных
+//let container = document.querySelector("#container");
+
+// вставляю элемент последним потомком
+// container.appendChild(newDiv);
+// container.appendChild(newDiv);
+// container.appendChild(newDiv);
+
+// вставляем элемент первым потомком
+// container.prepend(newDiv);
+
+// родительский и дочерние элементы списка
+// let list = document.querySelector(".list");
+// console.log(list);
+// console.log(list.parentElement);
+// console.log(list.children);
+
+// добавление элемента из массива в список по нажатию на кнопку
+let fruits = ["Киви", "Ананас", "Кокос", "Апельсин", "Банан", "Яблоко"];
+let list = document.querySelector(".list");
+let addToList = document.querySelector("#add-to-list");
+
+addToList.addEventListener("click", function () {
+  // создаем разметку
+  let li = `<li>Ананас</li>`;
+  // добавляю в список элемент
+  list.insertAdjacentHTML("beforeend", li);
 });
