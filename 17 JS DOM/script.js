@@ -541,13 +541,23 @@ shopItemsBtns.forEach(function (button) {
 // console.log(list.children);
 
 // добавление элемента из массива в список по нажатию на кнопку
-let fruits = ["Киви", "Ананас", "Кокос", "Апельсин", "Банан", "Яблоко"];
+let fruits = ["Киви", "Ананас", "Кокос", "Апельсин", "Банан", "Яблоко", "Ежевика", "Клюква"];
 let list = document.querySelector(".list");
 let addToList = document.querySelector("#add-to-list");
 
 addToList.addEventListener("click", function () {
+  // получаем последний элемент массива
+  let lastEl = fruits.pop();
+
   // создаем разметку
-  let li = `<li>Ананас</li>`;
-  // добавляю в список элемент
-  list.insertAdjacentHTML("beforeend", li);
+  let li = `<li class="list-item">${lastEl}</li>`;
+
+  // пока есть элементы в массиве
+  if (lastEl) {
+    // добавляю в список элемент
+    list.insertAdjacentHTML("beforeend", li);
+  } else {
+    this.textContent = "Больше нет элементов";
+    this.disabled = true;
+  }
 });
