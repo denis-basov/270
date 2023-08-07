@@ -1,0 +1,15 @@
+.posts {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgb(225, 255, 245);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.posts .post {
+    background-color: aqua;
+    padding: 0 15px;
+}
