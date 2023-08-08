@@ -1,14 +1,79 @@
+<?php
+
+$title = 'Основы PHP !!!';
+
+$firstName = 'Петр';
+$lastName = 'Иванов';
+$age = 66;
+$hobby = ['Готовить', 'Гулять', 'Строить'];
+$isAdmin = false;
+$children = null;
+
+$otput = "<h3>Имя: $firstName</h3>";
+$otput = '<h3>Имя: ' . $firstName . '</h3>';
+
+$array = ['имя', 'почта', 'телефон', 'возраст'];
+
+// ассоциативный массив
+$user = [
+    'firstName' => 'Иван',
+    'lastName' => 'Петров',
+    'age' => 22
+];
+/**
+ * let user = {
+ *  firstName: 'Иван',
+ *  lastName: 'Петров',
+ *  age: 22
+ * }
+ */
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><?php echo $title; ?></title>
 </head>
 
 <body>
-    <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea culpa nostrum fuga dolore, perferendis quisquam nobis illum veritatis quos alias amet odio animi accusantium minus id ex autem molestiae nam repudiandae, earum recusandae sit hic! Sapiente animi temporibus aliquam iure soluta maiores, assumenda blanditiis. Quae nisi, delectus dolor, eveniet quibusdam placeat alias dolores accusamus ullam rerum natus repellat. Est repellat enim sapiente facilis ipsam asperiores nulla quidem eius alias consectetur labore repudiandae obcaecati voluptatem excepturi, aspernatur id architecto vero ratione molestias officiis animi! Illum deleniti dignissimos nesciunt provident explicabo sunt cum saepe, laboriosam aliquid reiciendis vel. Ad, reiciendis distinctio. Possimus!</h1>
+
+    <header>
+        <p>Привет, <?php echo $firstName; ?>!</p>
+        <ol>
+            <?php
+            foreach ($array as $value) {
+                echo "<li>$value</li>";
+            }
+            ?>
+        </ol>
+    </header>
+    <h1><?php echo $title; ?></h1>
+    <ul>
+        <li>Имя: <?php echo $firstName; ?></li>
+        <li>Фамилия: <?php echo $lastName; ?></li>
+        <li>Возраст: <?php echo $age; ?></li>
+        <li>Хобби: <?php echo implode(', ', $hobby); ?></li>
+        <!--  implode(', ', $hobby); -->
+        <!--  hobby.join(', ')  -->
+    </ul>
+
+    <?php echo $otput; ?>
+
+    <footer>
+        <ul>
+            <?php
+            foreach ($user as $key => $value) {
+                echo "<li>$key: $value</li>";
+            }
+            ?>
+        </ul>
+        <h3><?php echo $title; ?></h3>
+        <p>Copyright © 2001-<?php echo date("Y"); ?> The PHP Group</p>
+    </footer>
 </body>
 
 </html>

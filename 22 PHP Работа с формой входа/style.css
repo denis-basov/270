@@ -1,0 +1,15 @@
+form {
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+.user-info {
+    background-color: bisque;
+    padding: 20px;
+    border-radius: 10px;
+}
