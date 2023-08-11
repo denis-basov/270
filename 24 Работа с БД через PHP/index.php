@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * страница со списком авторов
+ */
+
 // подключаю файл с соединением с бд
 require 'db_connect.php';
 
@@ -10,7 +15,7 @@ $query = "SELECT id, first_name, last_name, short_info, avatar
 $statement = $pdo->query($query, PDO::FETCH_ASSOC); // объект класса PDOStatement
 // забираем данные из объекта класса PDOStatement
 $result = $statement->fetchAll();
-// debug($result);
+//debug($result);
 
 // подключаю шаблон для вывода авторов на страницу
-require 'authors.php';
+require 'views/authors_temp.php';

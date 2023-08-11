@@ -7,6 +7,8 @@ echo phpinfo();
 // многие ко многим
 
 // создание таблицы с авторами
+
+
 CREATE TABLE authors(
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	first_name VARCHAR(255) NOT NULL,
@@ -15,6 +17,8 @@ CREATE TABLE authors(
 	biography TEXT NOT NULL,
 	avatar TEXT NOT NULL
 );
+
+
 
 // добавляем авторов в таблицу
 INSERT INTO `authors` (`id`, `first_name`, `last_name`, `short_info`, `biography`, `avatar`) VALUES
