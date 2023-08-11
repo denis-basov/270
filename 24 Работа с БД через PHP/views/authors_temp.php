@@ -10,6 +10,7 @@
 
 <body>
 	<h1>Авторы</h1>
+	<a href="news.php">Новости</a>
 	<!-- вывод авторов в документ -->
 	<div class="authors">
 		<?php
