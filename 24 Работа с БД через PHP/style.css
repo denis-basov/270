@@ -89,3 +89,38 @@
 .news .news-item .text-info a h2 {
     margin-top: 0;
 }
+
+/* news detail */
+.news-item {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: aliceblue;
+    padding: 40px;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+.news-item .news-info {
+    padding: 20px;
+    background-color: antiquewhite;
+}
+
+.news-item .news-info img {
+    width: 100%;
+}
+
+.news-item .author-info {
+    background-color: rgb(195, 253, 253);
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.news-item .author-info img {
+    width: 90%;
+}

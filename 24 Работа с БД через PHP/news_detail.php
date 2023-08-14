@@ -26,6 +26,9 @@ $query = "SELECT news.id AS news_id, title, text, add_date, image,
 $statement = $pdo->query($query, PDO::FETCH_ASSOC); // объект класса PDOStatement
 // забираем данные из объекта класса PDOStatement
 $news_item = $statement->fetch();
-debug($news_item);
+//debug($news_item);
+
+// разбиваем текст новости на параграфы
+$news_item['text'] = str_replace("\r\n\r\n", '</p><p>', $news_item['text']);
 
 require 'views/news_detail_temp.php';
