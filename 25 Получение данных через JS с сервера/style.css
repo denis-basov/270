@@ -1,3 +1,4 @@
+/* новости */
 .news {
     max-width: 1200px;
     padding: 40px;
@@ -34,4 +35,31 @@
 .news .news-item .author-info img {
     width: 50px;
     border-radius: 50%;
+}
+
+/* авторы */
+.authors {
+    max-width: 1000px;
+    background-color: aliceblue;
+    margin: 0 auto;
+    padding: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px 20px;
+}
+
+.authors h1 {
+    grid-column: 1/5;
+    /* text-align: center; */
+    justify-self: center;
+}
+
+.authors .author img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.authors .author h2 {
+    text-align: center;
 }
