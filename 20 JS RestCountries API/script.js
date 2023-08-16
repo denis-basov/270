@@ -35,6 +35,7 @@ async function whereIAm(country) {
   let response = await fetch(`https://restcountries.com/v3.1/name/${country}`);
 
   let data = await response.json();
+  console.log(data[0]);
 
   showCountry(data[0]);
 }

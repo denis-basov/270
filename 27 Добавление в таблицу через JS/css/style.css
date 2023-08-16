@@ -1,0 +1,29 @@
+.error {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.input-error {
+    border-color: red;
+}
+
+.input-success {
+    border-color: green;
+}
+
+/* ошибка с пом. абсолютного позиционирования */
+.abs-container {
+    position: relative;
+}
+
+.abs-container .abs-element {
+    position: absolute;
+}
+
+.abs-container .abs-element-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
