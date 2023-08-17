@@ -24,6 +24,13 @@
 .abs-container .abs-element-2 {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 3%;
     cursor: pointer;
+
+    background-color: rgb(246, 246, 246);
+    border: 2px solid rgb(186, 186, 185);
+    padding: 2px 10px;
+    border-radius: 5px;
+    color: brown;
+    width: 150px;
 }

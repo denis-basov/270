@@ -1,9 +1,17 @@
-// блокировка кнопки отправки формы
+// изначально полагаем, что все поля заполнены неправильно
+let flags = {
+  login: false,
+  email: false,
+  password: false,
+};
 
-// 1
+// блокировка кнопки отправки формы
 let regForm = document.querySelector("#reg-form"); // получаем форму
 regForm.addEventListener("submit", function (event) {
-  event.preventDefault(); // отменяем отправку
+  // если хотя бы одно свойство имеет значение ложь, блокируем отправку
+  if (!flags.login || !flags.email || !flags.password) {
+    event.preventDefault(); // отменяем отправку
+  }
 });
 
 // let submitBtn = document.querySelector("#submit-btn");// получаем кнопку отправки формы
@@ -32,6 +40,8 @@ async function checkLoginDB(login) {
 
 // функция для проверки логина
 function checkLogin(login, loginTaken) {
+  flags.login = false;
+
   if (login.length < 5) {
     // выдаем ошибку
     loginError.textContent = "Логин должен быть не менее 5 символов";
@@ -40,14 +50,16 @@ function checkLogin(login, loginTaken) {
     // выводим ошибку
     loginError.textContent = "Такой логин уже зарегистрирован";
   } else {
-    loginError.textContent = "";
+    // если попали сюда, значит логин введен верно
+    loginError.textContent = ""; // очищаем поле с ошибкой
+    flags.login = true; // переключаем флаг с логином
   }
 }
 
 // при покидании фокуса проверяем введенное значение
 loginEl.addEventListener("blur", function () {
   // получаем введенное значение в переменную
-  let value = loginEl.value;
+  let value = loginEl.value.trim();
 
   checkLoginDB(value);
 });
@@ -60,6 +72,8 @@ let emailEl = document.querySelector("#email");
 let emailError = document.querySelector("#email-error");
 
 function checkEmail(email, emailTaken) {
+  flags.email = false;
+
   // если строка с емейлом пустая
   if (email.length === 0) {
     emailError.textContent = "Укажите адрес электронной почты";
@@ -70,6 +84,7 @@ function checkEmail(email, emailTaken) {
     emailError.textContent = "Указанный адрес уже зарегистрирован";
   } else {
     emailError.textContent = "";
+    flags.email = true;
   }
 }
 
@@ -77,14 +92,13 @@ function checkEmail(email, emailTaken) {
 async function checkEmailDB(email) {
   let response = await fetch(`server/check_form_data.php?email=${email}`);
   let data = await response.json();
-  console.log(data);
 
   checkEmail(email, data.taken);
 }
 
 // обработчик события blur поля ввода емейла
 emailEl.addEventListener("blur", function () {
-  let value = emailEl.value;
+  let value = emailEl.value.trim();
 
   checkEmailDB(value);
 });
@@ -98,7 +112,9 @@ let passwordError = document.querySelector("#password-error");
 
 // обработчик события blur поля ввода пароля
 passwordEl.addEventListener("blur", function () {
-  let value = passwordEl.value;
+  let value = passwordEl.value.trim();
+  // меняем флаг на ложь
+  flags.password = false;
 
   // проверка на длину пароля (нее менее 6)
   if (value.length < 6) {
@@ -113,6 +129,8 @@ passwordEl.addEventListener("blur", function () {
     // меняем цвет границы на зеленый
     passwordEl.classList.add("input-success");
     passwordEl.classList.remove("input-error");
+    // меняем флаг на истину
+    flags.password = true;
   }
 });
 
@@ -123,9 +141,15 @@ let typeBtn = document.querySelector("#type-btn");
 
 // при клике на элемент
 typeBtn.addEventListener("click", function () {
-  // если значение атрибуту = password
-  // заменить на text
-  // если значение атрибута = text
-  // заменить на password
-  passwordEl.setAttribute("type", "text");
+  // если значение атрибута = password
+  if (passwordEl.getAttribute("type") === "password") {
+    // заменить на text
+    passwordEl.setAttribute("type", "text");
+    typeBtn.textContent = "Скрыть пароль";
+  } else {
+    // если значение атрибута = text
+    // заменить на password
+    passwordEl.setAttribute("type", "password");
+    typeBtn.textContent = "Показать пароль";
+  }
 });

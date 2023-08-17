@@ -13,7 +13,7 @@
       <div class="row">
         <div class="col-md-8 mb-5">
           <h2>Регистрация</h2>
-          <form id="reg-form" action="registration.php" method="POST" class="p-5 bg-white">
+          <form id="reg-form" action="registration.php" method="POST" enctype="multipart/form-data" class="p-5 bg-white">
             <!-- login -->
             <div class="row form-group mb-4">
               <div class="col-md-12 abs-container">
@@ -39,6 +39,14 @@
                 <input type="password" id="password" name="password" class="form-control" placeholder="Не менее шести произвольных символов" />
                 <span class="error abs-element" id="password-error"></span>
                 <span class="abs-element-2" id="type-btn">Показать пароль</span>
+              </div>
+            </div>
+
+            <!-- avatar -->
+            <div class="row form-group mb-4">
+              <div class="col-md-12">
+                <label class="text-black">Аватар</label><br />
+                <input type="file" name="avatar" />
               </div>
             </div>
 
