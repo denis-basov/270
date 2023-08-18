@@ -1,3 +1,7 @@
+/**
+ * обработка данных формы регистрации
+ */
+
 // изначально полагаем, что все поля заполнены неправильно
 let flags = {
   login: false,
@@ -135,21 +139,72 @@ passwordEl.addEventListener("blur", function () {
 });
 
 /**
- * показать пароль при клике на элемент #type-btn
+ * показать пароль при клике на элемент .type-btn
  */
-let typeBtn = document.querySelector("#type-btn");
+let typeBtn = document.querySelectorAll(".type-btn");
+console.log(typeBtn);
 
-// при клике на элемент
-typeBtn.addEventListener("click", function () {
-  // если значение атрибута = password
-  if (passwordEl.getAttribute("type") === "password") {
-    // заменить на text
-    passwordEl.setAttribute("type", "text");
-    typeBtn.textContent = "Скрыть пароль";
-  } else {
-    // если значение атрибута = text
-    // заменить на password
-    passwordEl.setAttribute("type", "password");
-    typeBtn.textContent = "Показать пароль";
+typeBtn.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    let sibling = btn.previousElementSibling.previousElementSibling;
+    // если значение атрибута = password
+    if (sibling.getAttribute("type") === "password") {
+      // заменить на text
+      sibling.setAttribute("type", "text");
+      btn.textContent = "Скрыть пароль";
+    } else {
+      // если значение атрибута = text
+      // заменить на password
+      sibling.setAttribute("type", "password");
+      btn.textContent = "Показать пароль";
+    }
+  });
+});
+
+/**
+ * обработка данных формы входа
+ */
+// предпорагаем, что логин введен неверно
+let enterLoginFlag = false;
+
+let enterForm = document.querySelector("#enter-form"); // получаем форму входа
+
+// обработка события отправки формы
+enterForm.addEventListener("submit", function (event) {
+  // если логин введен неверно
+  if (!enterLoginFlag) {
+    event.preventDefault(); // блокируем отправку формы входа
   }
+});
+
+let enterLogin = document.querySelector("#enter-login"); // получаем логин
+let enterLoginError = document.querySelector("#enter-login-error"); // получаем спан для ошибки
+
+async function enterCheckLoginDB(login) {
+  enterLoginFlag = false;
+
+  // отправляем GET запрос на сервер и передаем введенный логин
+  let response = await fetch(`server/check_form_data.php?login=${login}`);
+  //console.log(response);
+
+  let data = await response.json();
+
+  // если логин не найден в БД
+  if (!data.taken) {
+    // выдаем ошибку о том, что логин неверен
+    enterLoginError.textContent = "Логин не найден в базе данных";
+  } else {
+    enterLoginError.textContent = "";
+    enterLoginFlag = true;
+  }
+  console.log(enterLoginFlag);
+}
+
+// при блюре инпута
+enterLogin.addEventListener("blur", function () {
+  // получаем введенное значение и удаляем пробелы
+  let value = enterLogin.value.trim();
+
+  // проверяем введенный логин по БД
+  enterCheckLoginDB(value);
 });

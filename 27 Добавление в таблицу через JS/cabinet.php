@@ -12,11 +12,15 @@ if (!isset($_SESSION['valid_user'])) {
 require 'server/db_connect.php';
 
 // получаем все данные о пользователе из БД по ID 
-$query = "SELECT login, email, password, avatar
-          FROM users;";
+$query = "SELECT id, login, email, password, avatar
+          FROM users
+          WHERE id=$_SESSION[id];";
+$statement = $pdo->query($query, PDO::FETCH_ASSOC);
+$user = $statement->fetch();
+//print_r($user);
 
 // вывести в документ
-// добавить ссылку на выход с сайта
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,9 +37,13 @@ $query = "SELECT login, email, password, avatar
     <div class="container">
         <div class="row">
             <div class="col-md-8 mb-5">
-                <p>ID пользователя: <?php echo $_SESSION['id']; ?></p>
-                <h2>Привет, <?php echo $_SESSION['valid_user']; ?></h2>
+                <h2>Привет, <?php echo $user['login']; ?></h2>
+                <img src="<?php echo $user['avatar']; ?>" alt="<?php echo $user['login']; ?>">
+                <h4>Ваш адрес электронной почты: <?php echo  $user['email']; ?></h4>
+                <h4>Ваш пароль: <?php echo  $user['password']; ?></h4>
+
                 <a href="/">На главную</a>
+                <a href="users.php">Список пользователей</a>
                 <a href="exit.php" class="bg-danger p-2">Выход</a>
             </div>
         </div>
