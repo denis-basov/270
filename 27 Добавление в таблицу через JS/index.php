@@ -1,14 +1,35 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- если пользователь авторизован -->
+  <?php if (isset($_SESSION['valid_user'])) : ?>
+    <!-- показывать приветствие и ссылку на лк -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mb-5">
+          <h2>Привет, <?php echo $_SESSION['valid_user']; ?></h2>
+          <a href="cabinet.php">Перейти в личный кабинет</a>
+          <a href="exit.php" class="bg-danger p-2">Выход</a>
+        </div>
+      </div>
+    </div>
+  <?php else : ?>
+    <!-- если не авторизован, показываем форму регистрации -->
     <div class="container">
       <div class="row">
         <div class="col-md-8 mb-5">
@@ -61,5 +82,8 @@
       </div>
     </div>
     <script src="script.js"></script>
-  </body>
+  <?php endif; ?>
+
+</body>
+
 </html>
