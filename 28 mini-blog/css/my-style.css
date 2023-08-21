@@ -1,0 +1,75 @@
+.error {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.input-error {
+    border-color: red;
+}
+
+.input-success {
+    border-color: green;
+}
+
+/* ошибка с пом. абсолютного позиционирования */
+.abs-container {
+    position: relative;
+}
+
+.abs-container .abs-element {
+    position: absolute;
+}
+
+.abs-container .abs-element-2 {
+    position: absolute;
+    top: 0;
+    right: 3%;
+    cursor: pointer;
+
+    background-color: rgb(246, 246, 246);
+    border: 2px solid rgb(186, 186, 185);
+    padding: 2px 10px;
+    border-radius: 5px;
+    color: brown;
+    width: 150px;
+}
+
+/* контейнер с юзерами*/
+.users {
+    background-color: aliceblue;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.users h3 {
+    grid-column: 1/4;
+    justify-self: center;
+}
+
+.users .user {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.users .user img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+@media (max-width:1000px) {
+    .users {
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:550px) {
+    .users {
+        padding: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
