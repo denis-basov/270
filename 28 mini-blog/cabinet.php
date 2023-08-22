@@ -30,10 +30,6 @@ require 'components/header.php';
             <img src="<?php echo $user['avatar']; ?>" alt="<?php echo $user['login']; ?>">
             <h4>Ваш адрес электронной почты: <?php echo  $user['email']; ?></h4>
             <h4>Ваш пароль: <?php echo  $user['password']; ?></h4>
-
-            <a href="/">На главную</a>
-            <a href="users.php">Список пользователей</a>
-            <a href="exit.php" class="bg-danger p-2">Выход</a>
         </div>
     </div>
 </div>

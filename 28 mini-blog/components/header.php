@@ -1,3 +1,5 @@
+<?php print_r($_SESSION); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +24,7 @@
     <link rel="stylesheet" href="css/my-style.css">
 </head>
 
-<body>
+<body data-valid-user="<?php echo isset($_SESSION['valid_user']) ? 'да' : 'нет'; ?>">
 
     <div class="site-wrap">
 
@@ -54,17 +56,13 @@
                         <nav class="site-navigation" role="navigation">
                             <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block mb-0">
                                 <li><a href="/">На главную</a></li>
-                                <li><a href="category.html">Politics</a></li>
-                                <li><a href="category.html">Tech</a></li>
-                                <li><a href="category.html">Entertainment</a></li>
-                                <li><a href="category.html">Travel</a></li>
-                                <li><a href="category.html">Sports</a></li>
-
+                                <li><a href="shop.php">Магазин</a></li>
                                 <li><a href="users.php">Список пользователей</a></li>
 
                                 <!-- если пользователь авторизован -->
                                 <?php if (isset($_SESSION['valid_user'])) : ?>
                                     <li><a href="cabinet.php"><?php echo $_SESSION['valid_user']; ?></a></li>
+                                    <li><a href="cart.php">Корзина</a></li>
                                     <li><a href="exit.php">Выход</a></li>
                                 <?php endif; ?>
 

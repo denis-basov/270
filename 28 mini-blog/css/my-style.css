@@ -60,6 +60,31 @@
     border-radius: 8px;
 }
 
+/* products */
+.products {
+    background-color: aliceblue;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.products .product {
+    background-color: antiquewhite;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.products .product h4 {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(202, 201, 201);
+}
+
+
+
+
+
 @media (max-width:1000px) {
     .users {
         padding: 20px;
