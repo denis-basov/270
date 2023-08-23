@@ -81,9 +81,28 @@
     border-bottom: 1px solid rgb(202, 201, 201);
 }
 
+/* cart */
+.cart-products {
+    margin: 50px 0;
+    padding: 30px;
+    background-color: aliceblue;
+}
 
+.cart-products .cart-product {
+    margin: 20px;
+    padding: 15px;
+    background-color: rgb(221, 238, 254);
+    display: grid;
+    grid-template-columns: 60% 15% 25%;
+    gap: 20px;
+}
 
-
+/* блок изменения кол-ва товаров */
+.count {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+}
 
 @media (max-width:1000px) {
     .users {
