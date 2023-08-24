@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/my-style.css">
 </head>
 
-<body data-valid-user="<?php echo isset($_SESSION['valid_user']) ? 'да' : 'нет'; ?>">
+<body data-valid-user="<?php echo isset($_SESSION['valid_user']) ? 'да' : 'нет'; ?>" data-user-id="<?php echo $_SESSION['id'] ?? ''; ?>">
 
     <div class="site-wrap">
 
