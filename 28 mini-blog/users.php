@@ -16,7 +16,7 @@ require 'components/header.php';
         </div>
     </div>
 </div>
-<script src="users.js"></script>
+<script src="js/users.js"></script>
 
 <?php
 // подключаем подвал сайта

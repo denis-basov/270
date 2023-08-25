@@ -69,9 +69,9 @@ require 'components/header.php';
 <div class="container">
     <h2>Корзина</h2>
     <div class="cart-products">
-        <?php foreach ($products as $product) : ?>
-            <div class="cart-product">
-                <h4><?= $product['title'] ?></h4>
+        <?php foreach ($products as $index => $product) : ?>
+            <div class="cart-product cart-product-<?= $index + 1; ?>">
+                <h4><?= $product['title']; ?> <?= $product['id']; ?></h4>
                 <div class="quantity">
                     <button class="plus btn btn-secondary rounded">+</button>
                     <span class="count">1</span>
@@ -81,11 +81,15 @@ require 'components/header.php';
                     <h3>Цена: <?= $product['price']; ?> руб.</h3>
                     <p>Цена за единицу: <?= $product['price']; ?> руб.</p>
                 </div>
+                <div class="delete-item"><a href="server/delete_from_cart.php?productId=<?= $product['id']; ?>">X</a></div>
             </div>
         <?php endforeach; ?>
         <h3>Итого: <?= $totalPrice ?> руб.</h3>
         <h3 id="total-js">Итого JS: </h3>
-        <button id="set-order" type="button" class="btn btn-primary">Оформить заказ</button>
+        <!-- если в массиве с корзиной есть элементы, показываем кнопку для оформления -->
+        <?php if ($_SESSION['cart']) : ?>
+            <button id="set-order" type="button" class="btn btn-primary">Оформить заказ</button>
+        <?php endif; ?>
     </div>
 </div>
 <script src="js/cart.js"></script>

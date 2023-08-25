@@ -172,3 +172,15 @@ setOrder.addEventListener("click", function () {
   // отправка данных о заказе на сервер
   sendOrder(userId, totalPrice);
 });
+
+/**
+ * удаление элемента
+ */
+// let cartProducts = document.querySelectorAll(".cart-product");
+// console.log(cartProducts);
+
+// cartProducts.forEach(function (el) {
+//   el.addEventListener("click", function () {
+//     el.remove();
+//   });
+// });

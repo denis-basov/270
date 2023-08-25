@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Авг 24 2023 г., 18:07
+-- Время создания: Авг 25 2023 г., 17:59
 -- Версия сервера: 10.4.28-MariaDB
 -- Версия PHP: 8.2.4
 
@@ -119,7 +119,7 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `user_id`, `total_price`, `add_date`, `status`) VALUES
-(1, 25, 1175, '2023-08-24 14:06:08', 'Получен'),
+(1, 25, 1175, '2023-08-24 14:06:08', 'Оформлен'),
 (19, 25, 3413, '2023-08-24 14:40:16', 'Передан в доставку'),
 (20, 25, 4090, '2023-08-24 14:42:37', 'Оформлен'),
 (21, 25, 912, '2023-08-24 14:43:21', 'Оформлен'),
@@ -127,7 +127,13 @@ INSERT INTO `orders` (`id`, `user_id`, `total_price`, `add_date`, `status`) VALU
 (24, 25, 3135, '2023-08-24 14:53:10', 'Оформлен'),
 (25, 25, 2458, '2023-08-24 14:57:39', 'Оформлен'),
 (26, 25, 1364, '2023-08-24 14:58:38', 'Оформлен'),
-(27, 25, 7375, '2023-08-24 15:59:55', 'Оформлен');
+(27, 25, 7375, '2023-08-24 15:59:55', 'Оформлен'),
+(29, 26, 3873, '2023-08-25 11:43:39', 'Оформлен'),
+(32, 26, 3984, '2023-08-25 12:56:29', 'Оформлен'),
+(33, 26, 5305, '2023-08-25 12:57:33', 'Оформлен'),
+(34, 26, 4340, '2023-08-25 13:15:40', 'Оформлен'),
+(35, 26, 940, '2023-08-25 13:17:38', 'Оформлен'),
+(37, 26, 6991, '2023-08-25 13:32:20', 'Оформлен');
 
 -- --------------------------------------------------------
 
@@ -167,7 +173,7 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `avatar` text DEFAULT NULL,
-  `friends` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT '[]' CHECK (json_valid(`friends`))
+  `friends` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -188,31 +194,8 @@ INSERT INTO `users` (`id`, `login`, `email`, `password`, `avatar`, `friends`) VA
 (21, 'cat3423', 'cat3423@weer', '$2y$10$cEj0WjkhCqjrVW17DpT3UuBNAbdOrz5dRZjpHF/BfTSAT9tztZPzG', 'images/pacto-visual-cWOzOnSoh6Q-unsplash.jpg', '[]'),
 (22, 'user3232', 'user3232@wewew', '$2y$10$N5rHW.Ki0OTnnrnrI7rgaeTHeSupgy/qZhPbSwLcbDIwiSWGVX.Ae', 'images/noemi-macavei-katocz-or6mrFMVmHM-unsplash.jpg', '[]'),
 (23, 'user2234', 'user2234@egdfg', '$2y$10$l3fA5uLYCLw0UhM42N6dW.QbXYArirmK8H9jjUOh6pUoaL1pvuVKa', 'images/harps-joseph-tAvpDE7fXgY-unsplash.jpg', '[]'),
-(25, 'user999', 'user999@test', '$2y$10$VPhoxQTJCue3nuFTkFv8c.UgnXfFlZN0y1oj35OUEe0AXkfvupbue', 'images/jakob-owens-DQPP9rVLYGQ-unsplash.jpg', '[]');
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `users_1`
---
-
-CREATE TABLE `users_1` (
-  `COL 1` varchar(2) DEFAULT NULL,
-  `COL 2` varchar(9) DEFAULT NULL,
-  `COL 3` varchar(17) DEFAULT NULL,
-  `COL 4` varchar(19) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Дамп данных таблицы `users_1`
---
-
-INSERT INTO `users_1` (`COL 1`, `COL 2`, `COL 3`, `COL 4`) VALUES
-('id', 'login', 'email', 'password'),
-('1', 'ivan111', 'ivan111@test.ru', '123456'),
-('2', 'anna111', 'anna111@test.ru', 'sd;ooljkfjapwoeur'),
-('3', 'anna222', 'anna222@test.ru', 'rgfdsrge45gasfg'),
-('4', 'Sergey333', 'Sergey333@test.ru', 'osidjf;osdijf;poidf');
+(25, 'user999', 'user999@test', '$2y$10$VPhoxQTJCue3nuFTkFv8c.UgnXfFlZN0y1oj35OUEe0AXkfvupbue', 'images/jakob-owens-DQPP9rVLYGQ-unsplash.jpg', '[21,23,22,21,20,17,18,19,16,15,14,25,26,26,26,26]'),
+(26, 'user888', 'user888@test', '$2y$10$4mEgER7VOU/u7KSgTTOGiuX2n7ytjKLqkYiI7scEeB60Iwg8NfVhi', 'images/alex-suprun-ZHvM3XIOHoE-unsplash.jpg', '[]');
 
 --
 -- Индексы сохранённых таблиц
@@ -270,7 +253,7 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT для таблицы `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT для таблицы `products`
@@ -282,7 +265,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

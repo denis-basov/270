@@ -93,8 +93,20 @@
     padding: 15px;
     background-color: rgb(221, 238, 254);
     display: grid;
-    grid-template-columns: 60% 15% 25%;
+    grid-template-columns: 50% 15% 25% 5%;
     gap: 20px;
+}
+
+.cart-products .cart-product .delete-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-products .cart-product .delete-item a {
+    color: red;
+    font-size: 22px;
+    font-weight: 700;
 }
 
 /* блок изменения кол-ва товаров */
@@ -122,10 +134,23 @@
 
 .orders .order {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     padding: 10px;
     border-bottom: 1px solid rgb(219, 219, 219);
 }
+
+.orders .order span:last-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orders .order span:last-of-type a {
+    color: red;
+    font-size: 20px;
+    font-weight: 700;
+}
+
 
 .orders .order.back {
     background-color: rgb(216, 253, 241);

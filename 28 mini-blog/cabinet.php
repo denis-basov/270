@@ -29,6 +29,17 @@ $query = "SELECT orders.id, login, email, total_price, add_date, status
 $statement = $pdo->query($query);
 $orders = $statement->fetchAll();
 
+/**
+ * получаем информацию о друзьях текущего клиента
+ */
+$query = "SELECT friends
+            FROM users
+            WHERE id = $_SESSION[id];";
+$statement = $pdo->query($query);
+$friendsJSON = $statement->fetch()['friends'];
+// раскодируем строку JSON и получаем массив
+$friends = json_decode($friendsJSON);
+
 
 
 require 'components/header.php';
@@ -42,6 +53,11 @@ require 'components/header.php';
             <h4>Ваш адрес электронной почты: <?php echo  $user['email']; ?></h4>
             <h4>Ваш пароль: <?php echo  $user['password']; ?></h4>
         </div>
+        <div class="col-md-4 mb-5">
+            <?php foreach ($friends as $friendId) : ?>
+                <p>ID: <?= $friendId ?></p>
+            <?php endforeach; ?>
+        </div>
     </div>
 
     <div class="row">
@@ -54,6 +70,7 @@ require 'components/header.php';
                     <span>Сумма</span>
                     <span>Дата</span>
                     <span>Статус</span>
+                    <span>Отменить</span>
                 </div>
                 <?php foreach ($orders as $index => $order) : ?>
                     <div class="order order-<?= $index + 1; ?> <?= $index % 2 === 0 ? 'back' : '' ?>">
@@ -63,6 +80,7 @@ require 'components/header.php';
                         <span><?= $order['total_price'] . ' руб.' ?></span>
                         <span><?= $order['add_date'] ?></span>
                         <span><?= $order['status'] ?></span>
+                        <span><a href="server/delete_order.php?orderId=<?= $order['id'] ?>">X</a></span>
                     </div>
                 <?php endforeach; ?>
             </div>

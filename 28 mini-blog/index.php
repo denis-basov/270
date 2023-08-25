@@ -113,4 +113,7 @@ require 'components/header.php';
 <?php
 // подключаем подвал сайта
 require 'components/footer.php';
+
+
+
 ?>
